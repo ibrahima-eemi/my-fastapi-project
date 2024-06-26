@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My FastAPI Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, {{ name }}!</h1>
+        <p>Welcome to My FastAPI Project. This API provides functionalities for managing students and their grades.</p>
+        <h2>API Endpoints</h2>
+        <ul>
+            <li><strong>POST /token</strong> - Obtain a JWT token</li>
+            <li><strong>POST /student</strong> - Create a new student</li>
+            <li><strong>GET /student/{student_id}</strong> - Get details of a student by ID</li>
+            <li><strong>DELETE /student/{student_id}</strong> - Delete a student by ID</li>
+            <li><strong>GET /student/{student_id}/grades/{grade_id}</strong> - Get a specific grade for a student</li>
+            <li><strong>DELETE /student/{student_id}/grades/{grade_id}</strong> - Delete a specific grade for a student</li>
+            <li><strong>GET /export</strong> - Export student data in JSON or CSV format</li>
+        </ul>
+        <p>For more information, visit the <a href="/docs">API Documentation</a>.</p>
+    </div>
+</body>
+</html>

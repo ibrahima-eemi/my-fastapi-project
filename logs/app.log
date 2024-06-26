@@ -1,0 +1,110 @@
+2024-06-26 19:37:18,706 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:37:18,706 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:37:18,706 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:37:18,706 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:37:18,706 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:42:02,655 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:42:02,655 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:42:02,655 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:42:02,655 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:42:02,655 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:43:18,567 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:43:18,567 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:43:18,567 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:43:18,567 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:43:18,567 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:43:35,020 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:43:35,020 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:43:35,020 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:43:35,020 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:43:35,021 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:52:54,661 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:52:54,661 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:52:54,661 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:52:54,661 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:52:54,661 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:53:15,769 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:53:15,769 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:53:15,770 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:53:15,770 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:53:15,770 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:57:10,912 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:57:10,912 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:57:10,912 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:57:10,912 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:57:10,912 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:57:27,521 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:57:27,522 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:57:27,522 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:57:27,522 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:57:27,522 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:57:37,968 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:57:37,969 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:57:37,969 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:57:37,969 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:57:37,969 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 19:57:56,470 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 19:57:56,470 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 19:57:56,470 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 19:57:56,470 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 19:57:56,470 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero
+2024-06-26 20:00:18,724 - tests.test_custom_logging - INFO - Ceci est un message d'information.
+2024-06-26 20:00:18,725 - tests.test_custom_logging - WARNING - Ceci est un message d'avertissement.
+2024-06-26 20:00:18,725 - tests.test_custom_logging - ERROR - Ceci est un message d'erreur.
+2024-06-26 20:00:18,725 - tests.test_custom_logging - CRITICAL - Ceci est un message critique.
+2024-06-26 20:00:18,725 - tests.test_custom_logging - ERROR - Une exception s'est produite : division by zero
+Traceback (most recent call last):
+  File "/home/barry/my-fastapi-project/tests/test_custom_logging.py", line 44, in <module>
+    1 / 0
+    ~~^~~
+ZeroDivisionError: division by zero

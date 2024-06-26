@@ -1,18 +1,29 @@
 import logging
-from fastapi import FastAPI, HTTPException, Depends, status
+from fastapi import FastAPI, HTTPException, Depends, status, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.security import OAuth2PasswordRequestForm
+from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, EmailStr, Field, field_validator
 from typing import List, Optional
 from uuid import UUID, uuid4
-from datetime import timedelta
-from my_fastapi_project.auth import authenticate_user, create_access_token, get_current_active_user, Token, User, fake_users_db, ACCESS_TOKEN_EXPIRE_MINUTES
+from datetime import timedelta, timezone, datetime
+from my_fastapi_project.auth import (
+    authenticate_user,
+    create_access_token,
+    get_current_active_user,
+    Token,
+    User,
+    fake_users_db,
+    ACCESS_TOKEN_EXPIRE_MINUTES,
+)
 
 # Configuration du logger
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 app = FastAPI()
+
+templates = Jinja2Templates(directory="templates")
 
 # In-memory storage
 students = {}
@@ -52,13 +63,11 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
     return {"access_token": access_token, "token_type": "bearer"}
 
 @app.get("/", response_class=HTMLResponse)
-def read_root(name: Optional[str] = "World"):
+def read_root(request: Request, name: Optional[str] = "World"):
     """
     Endpoint to return a HTML document with a name parameter.
     """
-    return f"""
-    <h1>Hello <span>{name}</span></h1>
-    """
+    return templates.TemplateResponse("index.html", {"request": request, "name": name})
 
 @app.post("/student", response_model=UUID)
 def create_student(student: Student, current_user: User = Depends(get_current_active_user)):
@@ -128,7 +137,7 @@ def export_data(format: Optional[str] = "csv", current_user: User = Depends(get_
     # Functionality to export data in JSON or CSV format
     pass
 
-# Global error handler
+# Gestionnaire d'erreurs global
 @app.exception_handler(HTTPException)
 async def http_exception_handler(request, exc):
     return JSONResponse(
