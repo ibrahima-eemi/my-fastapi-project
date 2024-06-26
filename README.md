@@ -80,6 +80,16 @@ hashed_password = "<hashed_password>"  # Remplacez <hashed_password> par le hach
 
 ## Démarrage de l'application
 
+### Rendre le script `start.sh` exécutable
+
+Avant de démarrer l'application, vous devez rendre le script `start.sh` exécutable. Pour ce faire, exécutez la commande suivante :
+
+```bash
+chmod +x start.sh
+```
+
+### Démarrer l'application
+
 Pour démarrer l'application, exécutez :
 
 ```bash
@@ -116,6 +126,7 @@ curl -X POST "http://127.0.0.1:8000/token" -d "username=johndoe&password=secret"
 - **DELETE** `/student/{student_id}/grades/{grade_id}`: Suppression d'une note spécifique pour un étudiant (nécessite authentification)
 
 - **GET** `/export`: Exportation des données des étudiants en format JSON ou CSV (nécessite authentification)
+  - Query parameter : `format` (optionnel, `json` ou `csv`, par défaut `csv`)
 
 ### Exemple d'utilisation
 
@@ -125,7 +136,7 @@ curl -X POST "http://127.0.0.1:8000/token" -d "username=johndoe&password=secret"
 curl -X POST "http://127.0.0.1:8000/token" -d "username=johndoe&password=secret"
 ```
 
-#### Créer un étudiant
+#### Créer un étudiant et obtenir son ID
 
 ```bash
 curl -X POST "http://127.0.0.1:8000/student" -H "Authorization: Bearer <your-token>" -H "Content-Type: application/json" -d '{
@@ -136,16 +147,34 @@ curl -X POST "http://127.0.0.1:8000/student" -H "Authorization: Bearer <your-tok
 }'
 ```
 
-#### Récupérer les informations d'un étudiant
+La réponse contiendra l'ID de l'étudiant, par exemple :
+
+```json
+"e3b0a317-4ac4-421b-af8c-4de9f16e33d5"
+```
+
+#### Utiliser l'ID de l'étudiant pour récupérer les informations
 
 ```bash
-curl -X GET "http://127.0.0.1:8000/student/<student-id>" -H "Authorization: Bearer <your-token>"
+curl -X GET "http://127.0.0.1:8000/student/e3b0a317-4ac4-421b-af8c-4de9f16e33d5" -H "Authorization: Bearer <your-token>"
 ```
 
 #### Supprimer un étudiant
 
 ```bash
-curl -X DELETE "http://127.0.0.1:8000/student/<student-id>" -H "Authorization: Bearer <your-token>"
+curl -X DELETE "http://127.0.0.1:8000/student/e3b0a317-4ac4-421b-af8c-4de9f16e33d5" -H "Authorization: Bearer <your-token>"
+```
+
+#### Exporter les données en CSV
+
+```bash
+curl -X GET "http://127.0.0.1:8000/export?format=csv" -H "Authorization: Bearer <your-token>"
+```
+
+#### Exporter les données en JSON
+
+```bash
+curl -X GET "http://127.0.0.1:8000/export?format=json" -H "Authorization: Bearer <your-token>"
 ```
 
 ## Tests
@@ -158,11 +187,11 @@ poetry run pytest
 
 ## Auteur
 
-- Votre nom - [Votre Email](mailto:you@example.com)
+- Ibrahima DIALLO- [Votre Email](mailto:ibrahima.diallo@eemi.com)
 
 ## License
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d'informations.
 ```
 
-Assurez-vous de remplacer `<url-du-repo>`, `<your-token>`, `<student-id>`, "Votre nom", et "Votre Email" par les informations appropriées.# my-fastapi-project
+Assurez-vous de remplacer `<url-du-repo>`, `<your-token>`, `<student-id>`, "Votre nom", et "Votre Email" par les informations appropriées.

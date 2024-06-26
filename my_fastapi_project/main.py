@@ -1,10 +1,12 @@
 from fastapi import FastAPI, HTTPException, Depends, status
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.security import OAuth2PasswordRequestForm
 from pydantic import BaseModel, EmailStr, Field
 from typing import List, Optional
 from uuid import UUID, uuid4
 from datetime import timedelta
+from io import StringIO
+import csv
 from my_fastapi_project.auth import authenticate_user, create_access_token, get_current_active_user, Token, User, fake_users_db, ACCESS_TOKEN_EXPIRE_MINUTES
 
 app = FastAPI()
@@ -172,8 +174,22 @@ def export_data(format: Optional[str] = "csv", current_user: User = Depends(get_
     Returns:
     Réponse JSON ou CSV avec les données des étudiants.
     """
-    # Fonctionnalité pour exporter les données en format JSON ou CSV
-    pass
+    if format == "json":
+        return JSONResponse(content=[student.dict() for student in students.values()])
+
+    elif format == "csv":
+        output = StringIO()
+        writer = csv.writer(output)
+        writer.writerow(["id", "first_name", "last_name", "email", "grades"])
+        for student in students.values():
+            grades = "; ".join([f"{grade.course}:{grade.score}" for grade in student.grades])
+            writer.writerow([student.id, student.first_name, student.last_name, student.email, grades])
+
+        output.seek(0)
+        return StreamingResponse(output, media_type="text/csv", headers={"Content-Disposition": "attachment; filename=students.csv"})
+
+    else:
+        raise HTTPException(status_code=400, detail="Format not supported")
 
 # Gestion globale des erreurs
 @app.exception_handler(HTTPException)
