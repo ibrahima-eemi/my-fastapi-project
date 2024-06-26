@@ -188,6 +188,9 @@ poetry run pytest
 ## Auteur
 
 - Ibrahima DIALLO- [Votre Email](mailto:ibrahima.diallo@eemi.com)
+- Damien DA SILVA- [Votre Email](mailto:damien.dasilva@eemi.com)
+- Lamiss Chekh- [Votre Email](mailto:lamiss.chekh@eemi.com)
+- Richard LAM- [Votre Email](mailto:richard.lam@eemi.com)
 
 ## License
 
