@@ -21,7 +21,7 @@ Ce projet utilise FastAPI pour créer une API REST avec des fonctionnalités d'a
 
 1. Clonez le dépôt :
    ```bash
-   git clone <url-du-repo>
+   git clone https://github.com/ibrahima-eemi/my-fastapi-project.git
    cd my-fastapi-project
    ```
 
