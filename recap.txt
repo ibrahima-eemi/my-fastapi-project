@@ -1,0 +1,41 @@
+Récapitulatif des points abordés
+Création d'un projet FastAPI avec Poetry :
+
+Configuration de l'environnement avec Poetry.
+Création des fichiers de base (main.py, auth.py).
+Configuration et utilisation de JWT pour l'authentification :
+
+Configuration de auth.py pour gérer l'authentification JWT.
+Création d'endpoints pour l'authentification (obtenir un token JWT).
+Création de modèles Pydantic pour les étudiants et leurs notes :
+
+Modèles Student et Grade.
+Mise en place des endpoints CRUD :
+
+Endpoints pour créer, lire, mettre à jour et supprimer des étudiants et leurs notes.
+Gestion des erreurs :
+
+Gestion des exceptions avec des handlers globaux.
+Exportation des données :
+
+Endpoint pour exporter les données en format JSON ou CSV.
+Documentation du projet :
+
+Création d'un fichier README.md détaillé avec les instructions d'installation et d'utilisation.
+Explication de la procédure pour rendre le script start.sh exécutable.
+
+
+Projet FastAPI avec JWT :
+✅ Projet configuré avec FastAPI et JWT pour l'authentification.
+
+Endpoints CRUD pour les étudiants et leurs notes :
+✅ Endpoints créés pour gérer les étudiants et leurs notes.
+
+Gestion des erreurs :
+✅ Gestion des erreurs centralisée implémentée.
+
+Exportation des données :
+✅ Endpoint pour l'exportation des données en JSON ou CSV implémenté.
+
+Documentation :
+✅ Fichier README.md détaillé avec les instructions d'installation et d'utilisation.
