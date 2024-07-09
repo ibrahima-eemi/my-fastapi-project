@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation de l'API - FastAPI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello, World!</h1>
+        <p>Welcome to My FastAPI Project. This API provides functionalities for managing students and their grades.</p>
+
+        <h2>API Endpoints</h2>
+        <ul>
+            <li>POST /token - Obtain a JWT token</li>
+            <li>POST /student - Create a new student</li>
+            <li>GET /student/{student_id} - Get details of a student by ID</li>
+            <li>DELETE /student/{student_id} - Delete a student by ID</li>
+            <li>GET /student/{student_id}/grades/{grade_id} - Get a specific grade for a student</li>
+            <li>DELETE /student/{student_id}/grades/{grade_id} - Delete a specific grade for a student</li>
+            <li>GET /export - Export student data in JSON or CSV format</li>
+        </ul>
+        <a href="/docs" class="button">API Documentation</a>
+    </div>
+</body>
+</html>
